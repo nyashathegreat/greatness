@@ -1,9 +1,13 @@
+#A vending machine that allows the customer to enter their money and select an item they want to purchase and returns the product purchased so is the change.
+
 def vendingMachine():
     print("Dear Customer, You are so welcome!")
     print ("Please find pleasure whilist you shop with us & remember to follow the instructions below")
     print("")
     count = 0
     totalCredit  = 0
+    
+    #user inputs credit
     coinNum = int(input( "How many coins would you like to enter: "))
     while count in range (coinNum):
         coin = float(input( "Enter coin amount in R: "))
@@ -11,6 +15,8 @@ def vendingMachine():
         count += 1
     print("You have R{0} in your bank.".format(round(totalCredit,2)))
     print("")
+    
+     #user purchases product
     print("Please choose your item: ")
     print("")
     print("1.Ice Tea ")
@@ -22,7 +28,9 @@ def vendingMachine():
 
     finalCredit = totalCredit
     round (finalCredit,2)
-    item = int (input("Please enter the number of items you want to purchase: "))
+    
+    #transaction in process. Returns change and product purchased.
+    item = int (input("Please enter the number of the item you want to purchase: "))
     while item < item :
         print("Your requested item is not available")
         item = int (input(" Enter the number of your items: "))
